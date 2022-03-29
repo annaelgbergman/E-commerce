@@ -8,9 +8,9 @@
           <div class="right">
           <div class="text">
            <h1 class="name">{{ product.name }}</h1>
-           <h4 class="smalldesc">{{ product.smalldesc }}</h4>
+           <p class="smalldesc">{{ product.smalldesc }}</p>
            <p class="desc">{{ product.desc }}</p>
-           <h4 class="text-price">{{ product.price }}kr</h4>
+           <h4 class="text-price">{{ product.price }} kr.</h4>
           </div>
         </div>
       </div>
@@ -43,7 +43,7 @@ img {
   object-fit: contain;
 }
 .img {
-  border-right: 2px solid var(--clr-primary) ;
+  border-right: 1px solid var(--clr-primary);
   background: #fff;
   height: 500px;
 }
@@ -63,18 +63,48 @@ img {
   height: 500px;
   background: #fff;
 }
+.desc{
+  margin-top: 1.5rem;
+  font-size: 16px;
+}
+.smalldesc{
+  font-size: 15px;
+  margin-top: .5rem;
+}
 .text {
  margin-top: 7rem;
  margin-left: 2rem;
  width: 80%;
-}
-.desc{
-  margin-top: 1.5rem;
 }
 .arrow {
   font-size: 2rem;
   margin-top: 2rem;
   color: var(--clr-primary);
 }
+.text-price {
+  margin-top: .5rem;
+  font-size: 18px;
+  font-weight: 500;
+}
 
+@media (max-width: 768px){
+  .container {
+    width: 80%;
+  }
+  .wrapper{
+    display: block;
+  }
+  .left{
+    width: 100%;
+  }
+  .right {
+    width: 100%;
+    height: 250px;
+    border-right: 1px solid var(--clr-primary);
+  }
+  .text {
+    text-align: center;
+    margin-top: 0;
+  }
+}
 </style>
