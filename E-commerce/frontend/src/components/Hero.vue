@@ -3,7 +3,7 @@
       <div class="container">
         <div class="info">
           <h1 class="primary-text">Vill du växa?</h1>
-          <button class="btn btn-hero btn-primary">Köp en planta</button>
+          <button @click="scrollDown" class="btn btn-hero btn-primary">Köp en planta</button>
         </div>
       </div>
   </section>
@@ -11,7 +11,13 @@
 
 <script>
 export default {
-name: 'HeroSection'
+name: 'HeroSection',
+
+methods: {
+  scrollDown(){
+    window.scrollTo(0, 700)
+  }
+}
 }
 </script>
 
@@ -19,7 +25,7 @@ name: 'HeroSection'
 .hero {
   height: 80vh;
   width: 100%;
-  background: url("../assets/hero2.jpg"), rgba(0, 0, 0, 0.541);
+  background: url("../assets/hero2.jpg"), #0000008a;
   background-size: cover;
   background-blend-mode: multiply;
 }
@@ -36,6 +42,7 @@ name: 'HeroSection'
   font-size: 130px;
   font-weight: 500;
   text-transform: uppercase;
+  text-shadow: 4px 2px var(--clr-primary);
 }
 .btn-hero {
   color: #fff;
@@ -43,6 +50,10 @@ name: 'HeroSection'
   font-size: 20px;
   font-weight: 500;
   text-transform: uppercase;
+  transition: transform .2s;
+}
+.btn-hero:hover{
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px){

@@ -1,18 +1,16 @@
 <template>
   <Navbar />
       <router-view to="home"/>
-    <div class="container">
-      <ProductCard />
-    </div>
+  <Footer />
 </template>
 
 <script>
-import ProductCard from './components/Products/ProductCard.vue'
+import Footer from './components/Footer.vue'
 import Navbar from './components/Navbar.vue'
 export default {
   components: {
     Navbar,
-    ProductCard,
+    Footer,
   }
 }
 </script>

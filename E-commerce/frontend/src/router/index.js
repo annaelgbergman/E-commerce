@@ -11,7 +11,8 @@ const routes = [
   {
     path: '/ProductDetail',
     name: 'ProductDetail',
-    component: ProductDetailView
+    component: ProductDetailView,
+    props: true
   },
 ]
 

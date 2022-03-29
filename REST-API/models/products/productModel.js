@@ -72,6 +72,7 @@ exports.createProduct = (req, res) => {
         // Produkten finns inte, skapa ny produkt
         Product.create({
             name:   req.body.name,
+            smalldesc: req.body.smalldesc,
             desc:   req.body.desc,
             price:  req.body.price,
             image:  req.body.image
