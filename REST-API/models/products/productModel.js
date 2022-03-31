@@ -1,6 +1,6 @@
 const Product = require('./productSchema');
 
-// Hämtar hem alla produkter
+// Get all products
 exports.getAllProducts = (req, res) => {
     Product.find({}, (err, product) => {
 
@@ -15,7 +15,7 @@ exports.getAllProducts = (req, res) => {
     })
 }
 
-// Hämta en produkt
+// Get one product 
 exports.getOneProduct = (req, res) => {
 
     Product.exists({ _id: req.params.id }, (err, result) => {
@@ -60,7 +60,7 @@ exports.createProduct = (req, res) => {
             })
         }
 
-        // Produkt existerar
+        // Product exist
         if(result) {
             return res.status(400).json({
                 statusCode: 400,
@@ -69,7 +69,7 @@ exports.createProduct = (req, res) => {
             })
         }
 
-        // Produkten finns inte, skapa ny produkt
+        // Product doesnt exist, create new product
         Product.create({
             name:   req.body.name,
             smalldesc: req.body.smalldesc,
@@ -97,7 +97,7 @@ exports.createProduct = (req, res) => {
     })
 }
 
-// Uppdaterat en produkt
+// Update product
 exports.updateProduct = (req, res) => {
 
     Product.exists({ _id: req.params.id }, (err, result) => {
@@ -148,7 +148,7 @@ exports.updateProduct = (req, res) => {
 
 }
 
-// Radera en produkt 
+// Delete product
 exports.deleteProduct = (req, res) => {
 
     Product.exists({ _id: req.params.id }, (err, result) => {

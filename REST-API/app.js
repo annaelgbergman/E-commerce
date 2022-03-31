@@ -10,10 +10,7 @@ app.use(express.urlencoded({ extended : false }));
 app.use(express.json());
 
 
-
-
 // ROUTER
-
 app.use('/api/products', productRouter); 
 
 
