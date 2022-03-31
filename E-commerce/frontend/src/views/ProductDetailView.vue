@@ -99,7 +99,7 @@ img {
   }
   .right {
     width: 100%;
-    height: 250px;
+    height: 285px;
     border-right: 1px solid var(--clr-primary);
   }
   .text {
