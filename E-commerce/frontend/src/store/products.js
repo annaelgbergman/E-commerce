@@ -26,6 +26,5 @@ export default {
       const res = await axios.get('products/' + id)
       commit('SET_PRODUCT', res.data)
     }
-    
   }
 }
